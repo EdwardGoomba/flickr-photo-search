@@ -25,6 +25,9 @@ $('form').submit( function (evt) {
       }); // end each
       photoHTML += '</ul>';
       $('#photos').html(photoHTML);
+
+      $searchField.prop('disabled',false);
+      $submitButton.attr('disabled', false).val('Search');
     }
     $.getJSON(flickerAPI, flickrOptions, displayPhotos);
 
